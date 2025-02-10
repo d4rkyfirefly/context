@@ -44,10 +44,10 @@ const HeroGradient = () => {
       aw: 7.5,
       bx: 1,
       by: -1,
-      color1: "#585843",
-      color2: "#717543",
-      color3: "#d2b172",
-      color4: "#2b3928",
+      color1: "#C0C0C0",  // Silver
+      color2: "#A9A9A9",  // Dark Gray (Steel-like)
+      color3: "#808080",  // Medium Gray
+      color4: "#5C5C5C",  // Darker Metallic
     }),
     []
   );

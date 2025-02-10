@@ -46,32 +46,20 @@ export const backgroundFragmentShader = `
       cheapNoise(vec3(st + by*v1 + vec2(S * 8.3, C * 2.8), 0.0126 * adjustedTime))
     );
     float n = .5 + .5 * cheapNoise(vec3(st + v2, 0.));
-    
-    vec3 color = mix(color1,
-      color2,
+
+    // 🎨 **New Color Palette for Silver & Dark Gold**
+    vec3 color = mix(vec3(0.75, 0.75, 0.75), // Silver
+      vec3(0.55, 0.55, 0.55), // Darker Silver
       clamp((n*n)*8.,0.0,1.0));
     color = mix(color,
-      color3,
+      vec3(0.43, 0.36, 0.26), // Dark Gold
       clamp(length(v1),0.0,1.0));
     color = mix(color,
-                color4,
+                vec3(0.68, 0.56, 0.36), // Brighter Gold
                 clamp(length(v2.x),0.0,1.0));
     
     color /= n*n + n * 7.;
     gl_FragColor = vec4(color,1.);
-  }
-`;
-
-export const sphereVertexShader = `
-  varying vec2 vUv;
-  varying vec3 vNormal;
-  varying vec3 vPosition;
-  
-  void main() {
-    vUv = uv;
-    vNormal = normalize(normalMatrix * normal);
-    vPosition = position;
-    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
   }
 `;
 
@@ -112,22 +100,14 @@ export const sphereFragmentShader = `
     vec3 pos = normalize(vPosition);
     st += pos.xy * 0.5;
     
-    vec2 v1 = vec2(cheapNoise(vec3(st, 2.)), cheapNoise(vec3(st, 1.)));
-    vec2 v2 = vec2(
-      cheapNoise(vec3(st + bx*v1 + vec2(C * 1.7, S * 9.2), 0.015 * adjustedTime)),
-      cheapNoise(vec3(st + by*v1 + vec2(S * 8.3, C * 2.8), 0.0126 * adjustedTime))
-    );
-    float n = .5 + .5 * cheapNoise(vec3(st + v2, 0.));
-    
-    vec3 color = mix(color1, color2, clamp((n*n)*8.,0.0,1.0));
-    color = mix(color, color3, clamp(length(v1),0.0,1.0));
-    color = mix(color, color4, clamp(length(v2.x),0.0,1.0));
-    
-    float specular = pow(max(dot(normalize(vec3(1.0, 1.0, 1.0)), vNormal), 0.0), 32.0);
-    color += vec3(specular * 0.5);
-    
-    color /= n*n + n * 7.;
-    color *= brightness;
-    gl_FragColor = vec4(color, 1.0);
+    vec3 color = mix(vec3(0.75, 0.75, 0.75), // Silver
+      vec3(0.55, 0.55, 0.55), // Darker Silver
+      clamp((cheapNoise(vec3(st, 0.0)) * 2.0), 0.0, 1.0));
+      
+    color = mix(color,
+      vec3(0.43, 0.36, 0.26), // Dark Gold
+      clamp((cheapNoise(vec3(st, 1.0)) * 2.0), 0.0, 1.0));
+
+    gl_FragColor = vec4(color * brightness, 1.0);
   }
 `;
