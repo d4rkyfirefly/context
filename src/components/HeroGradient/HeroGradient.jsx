@@ -44,10 +44,10 @@ const HeroGradient = () => {
       aw: 7.5,
       bx: 1,
       by: -1,
-      color1: "#C0C0C0",  // Silver
-      color2: "#A9A9A9",  // Dark Gray (Steel-like)
-      color3: "#808080",  // Medium Gray
-      color4: "#5C5C5C",  // Darker Metallic
+      color1: "#C0C0C0", // Silver
+      color2: "#A9A9A9", // Dark Gray
+      color3: "#B0C4DE", // Light Steel Blue
+      color4: "#4682B4", // Steel Blue
     }),
     []
   );
@@ -97,10 +97,10 @@ const HeroGradient = () => {
         timeSpeed: { value: 0.05 },
         scale: { value: 0.5 },
         brightness: { value: sphereControls.brightness },
-        color1: { value: new THREE.Color(0x585843) },
-        color2: { value: new THREE.Color(0x717543) },
-        color3: { value: new THREE.Color(0xd2b172) },
-        color4: { value: new THREE.Color(0x2b3928) },
+        color1: { value: new THREE.Color(0xC0C0C0) }, // Silver
+        color2: { value: new THREE.Color(0xA9A9A9) }, // Dark Gray
+        color3: { value: new THREE.Color(0xB0C4DE) }, // Light Steel Blue
+        color4: { value: new THREE.Color(0x4682B4) }, // Steel Blue
         ax: { value: 5 },
         ay: { value: 2.5 },
         az: { value: 5 },
