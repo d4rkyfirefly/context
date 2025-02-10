@@ -225,20 +225,20 @@ const Home = () => {
           <HeroGradient />
           <div className="header-container">
             <div className="header h-1">
-              <h1>Under what circumstances will you be prepared for the new economy?</h1>
-              <h1></h1>
+              <h1>Revolutionizing Finance with</h1>
+              <h1>Data-Driven Strategies</h1>
             </div>
             <div className="header h-2">
-              <h1>Experts delivering solutions that put extraordinary circunstances in proper context</h1>
-              <h1></h1>
+              <h1>Empowering Brokers & Investors with</h1>
+              <h1>AI-Powered Insights</h1>
             </div>
             <div className="header h-3">
-              <h1>Nơi sáng tạo,</h1>
-              <h1>Không giới hạn</h1>
+              <h1>Precision, Performance, Profitability</h1>
+              <h1>Our Top Priority</h1>
             </div>
             <div className="header h-4">
-              <h1>Where Vision Meets,</h1>
-              <h1>Limitless Design</h1>
+              <h1>Adapting to Market Dynamics with</h1>
+              <h1>Full Confidence</h1>
             </div>
           </div>
         </section>

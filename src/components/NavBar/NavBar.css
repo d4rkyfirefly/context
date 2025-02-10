@@ -51,15 +51,20 @@
 .logo a h3 {
   color: var(--light);
   letter-spacing: 0.15em;
+  font-size: 46px; /* Font size for "Context" */
+  font-weight: bold; /* Example of different style */
+  font-family: "Arial", sans-serif; /* Example of different font family */
 }
 
 .logo a span {
   position: relative;
   top: 0.75px;
   font-family: "Roobert";
-  font-size: 14px;
+  font-size: 27px; /* Font size for "Partners" */
   font-weight: 500;
   color: var(--light);
+  font-style: italic; /* Example of different style */
+  font-family: "Times New Roman", serif; /* Example of different font family */
 }
 
 .nav-links a {
@@ -70,8 +75,9 @@
 .nav-links a p {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 12px;
-  color: var(--light2);
+  font-size: 16px; /* Increased font size */
+  font-weight: bold; /* Increased font weight */
+  color: #B0B0B0; /* Changed color to a greyish tone */
 }
 
 p.current-lang {
@@ -92,9 +98,22 @@ p.current-lang {
   color: var(--dark);
 }
 
-@media (max-width: 900px) {
-  .navbar-container .langs {
-    display: none;
+@media (max-width: 1200px) {
+  .navbar-container {
+    width: 85%;
+  }
+
+  .logo a h3 {
+    font-size: 40px; /* Adjusted font size for "Context" */
+  }
+
+  .logo a span {
+    font-size: 24px; /* Adjusted font size for "Partners" */
+  }
+
+  .langs p,
+  .nav-links a p {
+    font-size: 14px; /* Adjusted font size for nav links */
   }
 }
 
@@ -102,5 +121,38 @@ p.current-lang {
   .navbar-container {
     width: 100%;
     padding: 2em 1em;
+  }
+
+  .logo a h3 {
+    font-size: 36px; /* Adjusted font size for "Context" */
+  }
+
+  .logo a span {
+    font-size: 22px; /* Adjusted font size for "Partners" */
+  }
+
+  .langs p,
+  .nav-links a p {
+    font-size: 12px; /* Adjusted font size for nav links */
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    width: 100%;
+    padding: 1.5em 1em;
+  }
+
+  .logo a h3 {
+    font-size: 32px; /* Adjusted font size for "Context" */
+  }
+
+  .logo a span {
+    font-size: 20px; /* Adjusted font size for "Partners" */
+  }
+
+  .langs p,
+  .nav-links a p {
+    font-size: 10px; /* Adjusted font size for nav links */
   }
 }

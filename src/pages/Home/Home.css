@@ -9,9 +9,12 @@ section.hero {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100%;
+  text-align: center;
   width: 100%;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -20,7 +23,9 @@ section.hero {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Ensures vertical stacking */
+  align-items: center; /* Centers text horizontally */
+  justify-content: center; /* Centers text vertically */
   gap: 0.5rem;
   width: 100%;
   opacity: 0;
@@ -33,10 +38,38 @@ section.hero {
 }
 
 .header h1 {
+  font-size: clamp(2rem, 5vw, 5rem); /* Dynamically adjusts between 2rem and 5rem */
+  font-weight: bold;
   color: white;
-  margin: 0;
-  transform: translateY(40px);
-  opacity: 0;
+  text-transform: none;
+  text-align: center;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .header h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .header h1 {
+    font-size: 1rem;
+  }
 }
 
 .h-1 {

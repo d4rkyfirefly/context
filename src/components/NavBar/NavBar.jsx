@@ -132,8 +132,8 @@ const NavBar = () => {
         <div className="nav-items">
           <div className="langs">
             <p className="current-lang">EN</p>
-            <p>VN</p>
-            <p>ZH</p>
+            <p>ES</p>
+            <p>AR</p>
           </div>
 
           <div className="nav-links">
