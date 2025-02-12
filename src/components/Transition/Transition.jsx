@@ -52,7 +52,7 @@ const Transition = (OriginalComponent, transitionText = "loading") => {
             <img src="/loader/loader-bg.jpg" alt="" />
           </div>
           <p className="transition-text">
-            origin <span>studio</span>
+             <span>Trusted by Investors</span>
           </p>
         </motion.div>
       </>

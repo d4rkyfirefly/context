@@ -7,6 +7,7 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import NavBar from "../../components/NavBar/NavBar";
 import Cursor from "../../components/Cursor/Cursor";
 import Transition from "../../components/Transition/Transition";
+import BackToTopButton from "../../components/BackButton/BackToTopButton";
 
 import { projects } from "./projects";
 
@@ -225,29 +226,29 @@ const Home = () => {
           <HeroGradient />
           <div className="header-container">
             <div className="header h-1">
-              <h1>Revolutionizing Finance with</h1>
-              <h1>Data-Driven Strategies</h1>
+              <h1>Unparalleled Discretion</h1>
+              <h1>and Confidentiality</h1>
             </div>
             <div className="header h-2">
-              <h1>Empowering Brokers & Investors with</h1>
-              <h1>AI-Powered Insights</h1>
+              <h1>Trusted Partner for Extraordinary</h1>
+              <h1>Client Engagements</h1>
             </div>
             <div className="header h-3">
-              <h1>Precision, Performance, Profitability</h1>
-              <h1>Our Top Priority</h1>
+              <h1>Innovation for Complex Transactions</h1>
+              <h1>and Special Situations</h1>
             </div>
             <div className="header h-4">
-              <h1>Adapting to Market Dynamics with</h1>
-              <h1>Full Confidence</h1>
+              <h1>Value Optimization</h1>
+              <h1>& Risk Mitigation</h1>
             </div>
           </div>
         </section>
 
-        <section className="work" id="work">
+        <section className="work" id="about">
           <div className="container">
             <div className="work-header">
               <HiArrowRight size={13} />
-              <p>Selected projects</p>
+              <p>About Us</p>
             </div>
 
             <div className="projects">
@@ -299,17 +300,13 @@ const Home = () => {
             <img src="/cta/cta-bg.png" alt="" />
           </div>
           <div className="cta-title">
-            <p>Trusted by visionaries</p>
+            <p>We Operate World Wide</p>
           </div>
           <div className="cta-header">
             <h2>
-              Apple, Netflix, Gucci, Tesla, Uniqlo, Sephora, Google, Moët &
-              Chandon, Spotify, BMW, Montblanc, Panasonic, Nespresso, L’Oréal,
-              Samsung
+              Connecting markets, businesses, and people across continents.
+              Your global financial partner in a borderless economy.
             </h2>
-          </div>
-          <div className="cta-btn">
-            <button>Discover more at origin.co</button>
           </div>
         </section>
 
@@ -321,9 +318,10 @@ const Home = () => {
             </div>
             <div className="manifesto-title">
               <h1>
-                We challenge norms, embrace change, pioneer progress. We are
-                innovators merging art and technology to craft experiences that
-                surprise, delight, and evolve.
+              Delivering financial solutions tailored to every market. Trusted by investors, institutions
+              and enterprises across the globe. We navigate international markets with data-driven precision 
+              surprise, delight, and evolve. AI-powered financial insights for a connected world. We integrate 
+              data and technology to drive smarter investments worldwide.
               </h1>
             </div>
           </div>
@@ -399,7 +397,7 @@ const Home = () => {
 
         <div className="marquee">
           <div className="marquee-text">
-            <h1>Explore the essence of Origin Studio</h1>
+            <h1>Explore</h1>
           </div>
         </div>
 
@@ -426,7 +424,7 @@ const Home = () => {
             </div>
             <div className="about-col">
               <div className="cta-btn">
-                <button>Discover more at origin.co</button>
+                <button>Discover</button>
               </div>
             </div>
           </div>
@@ -626,7 +624,7 @@ const Home = () => {
 
             <div className="footer-email">
               <p>We’d love to hear from you</p>
-              <h2>hello@origin.co</h2>
+              <h2>contact@context.partners</h2>
             </div>
 
             <div className="footer-content">
@@ -689,17 +687,13 @@ const Home = () => {
                 </div>
               </div>
               <div className="footer-col">
-                <div className="footer-col-header">
-                  <p>Follow Us</p>
-                </div>
-                <div className="footer-sub-col">
-                  <p>Instagram</p>
-                  <p>LinkedIn</p>
-                  <p>Twitter</p>
-                  <p>Behance</p>
-                  <p>Dribbble</p>
-                </div>
-              </div>
+        <div className="footer-col-header">
+          <p>Back to Top</p>
+        </div>
+        <div className="footer-sub-col">
+          <BackToTopButton />
+        </div>
+      </div>
             </div>
           </div>
         </section>

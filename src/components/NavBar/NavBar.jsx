@@ -137,13 +137,13 @@ const NavBar = () => {
           </div>
 
           <div className="nav-links">
-            <a href="#work">
+            <a href="#hero">
+              <p>Home</p>
+            </a>
+            <a href="#about">
               <p>About</p>
             </a>
             <a href="#manifesto">
-              <p>Service</p>
-            </a>
-            <a href="#about">
               <p>Process</p>
             </a>
             <a href="#team">

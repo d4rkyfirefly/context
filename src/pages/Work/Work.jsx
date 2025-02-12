@@ -6,10 +6,11 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import Cursor from "../../components/Cursor/Cursor";
 import Transition from "../../components/Transition/Transition";
 import BackButton from "../../components/BackButton/BackButton";
+import BackToTopButton from "../../components/BackButton/BackToTopButton";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
 
-import { IoMdArrowForward } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Work = () => {
@@ -32,7 +33,7 @@ const Work = () => {
 
         <section className="sp-title">
           <div className="container">
-            <h1>Shadow Beacon by Lightforms</h1>
+            <h1>Bespoke Financial Strategies by Context.Partners</h1>
           </div>
         </section>
 
@@ -43,17 +44,17 @@ const Work = () => {
         <section className="sp-details">
           <div className="container">
             <div className="sp-details-col">
-              <p className="sp-details-name">Shadow Beacon</p>
+              <p className="sp-details-name">Context.Partners</p>
 
               <div className="sp-tags">
-                <p>Motion Capture</p>
-                <p>Creative Direction</p>
-                <p>3D</p>
-                <p>Post Production</p>
+                <p>Strategic Advisory</p>
+                <p>Risk Mitigation</p>
+                <p>Capital Structuring</p>
+                <p>International Transactions</p>
               </div>
 
               <div className="sp-date">
-                <p>February 2021</p>
+                <p>Global Expertise</p>
               </div>
 
               <div className="sp-link">
@@ -62,23 +63,27 @@ const Work = () => {
                     <div className="icon">
                       <IoIosArrowRoundForward size={16} />
                     </div>
-                    View Project
+                    Explore Our Approach
                   </button>
                 </Link>
               </div>
             </div>
-            <div className="sp-details-col">
-              <p>Challenge</p>
+            <div className="sp-info-desc">
               <p>
-                Shadow Beacon is a tribute to the interplay between light and
-                form. During a time when the world seemed paused, we set out to
-                create a piece that celebrates movement, space, and emotion.
-                Combining motion capture with imaginative 3D landscapes, the
-                project envisions a dreamlike realm where light becomes a
-                storyteller. Through thoughtful creative direction and intricate
-                post-production, we crafted a narrative that feels both intimate
-                and expansive—a beacon for those searching for connection and
-                inspiration in uncertain times.
+                Context.Partners specializes in custom-crafted bespoke financial
+                and operational solutions that prioritize value optimization and
+                risk mitigation—all grounded in over a century of combined
+                experience across financial, operational, legal, and
+                international sectors.
+              </p>
+              <div className="spacer"></div>
+              <p>
+                Our client engagements are often extraordinary, reflecting the
+                unique circumstances and exceptional nature of those we serve.
+                We take great pride in maintaining the utmost discretion for our
+                clients, which include sovereign wealth funds,
+                ultra-high-net-worth family offices, multinational corporations,
+                and leading financial institutions.
               </p>
             </div>
           </div>
@@ -91,19 +96,31 @@ const Work = () => {
         <section className="sp-info">
           <div className="container">
             <div className="sp-info-title">
-              <h3>Challenge</h3>
+              <h3>Our Approach</h3>
             </div>
 
             <div className="sp-info-desc">
               <p>
-                Shadow Beacon explores the idea of finding clarity in moments of
-                obscurity. Inspired by the duality of light and shadow, we
-                imagined a character who navigates a surreal world, guided by
-                beams of light that reveal hidden paths and truths. This
-                character, free from physical constraints, embodies the
-                liberation from everyday burdens, moving fluidly through spaces
-                that are both familiar and otherworldly.
+                Each engagement is a testament to our expertise in finance, law,
+                and corporate strategy. From pre-bankruptcy planning to
+                regulatory compliance, we navigate complex scenarios with
+                precision.
               </p>
+              <div className="spacer"></div>
+              <p>
+                Our ability to source and structure capital on favorable terms
+                ensures rapid, predictable outcomes that position our clients
+                for success.
+              </p>
+              <div className="spacer"></div>
+              <p>
+                Our confidential assignments exemplify the trust our clients
+                place in us. We pride ourselves on our knowledge and research
+                capabilities to understand the relevant industries and markets,
+                based on our collective experience, while being able to think
+                outside-the-box to craft innovative custom solutions.
+              </p>
+              <div className="spacer"></div>
             </div>
           </div>
         </section>
@@ -117,19 +134,35 @@ const Work = () => {
         <section className="sp-info">
           <div className="container">
             <div className="sp-info-title">
-              <h3>Creative Solution</h3>
+              <h3>Tailored Solutions</h3>
             </div>
 
             <div className="sp-info-desc">
               <p>
-                To bring Shadow Beacon to life, we focused on creating a
-                seamless blend of reality and surrealism. Escapism became our
-                guiding principle, leading us to juxtapose real-life moments
-                with ethereal 3D landscapes. Shot on the quiet streets of
-                Saigon, our Director of Photography, Ray Lavers, captured
-                fleeting glimpses of reality in just two hours during
-                quarantine. These grounded visuals set the stage for the
-                dreamlike sequences that followed.
+                We arrange tailored transactions that align capital with
+                opportunity on a risk-adjusted basis, bring disruptive products
+                and technologies to market, and discretely negotiate complex
+                acquisitions and dispositions across both domestic and
+                international landscapes.
+              </p>
+              <div className="spacer"></div>
+              <p>
+                Moreover, we handle intricate financial, corporate, and real
+                estate transactions with the highest level of confidentiality.
+                Our expertise extends to managing special situations and
+                sensitive crises, including pre- and post-bankruptcy planning
+                and compliance issues that could jeopardize our clients'
+                reputations and freedoms.
+              </p>
+              <div className="spacer"></div>
+              <p>
+                Our team is comprised of professionals with backgrounds from
+                prestigious international law firms and top-tier investment
+                banking platforms. While not every assignment may appear
+                extraordinary at first glance, we regard the privilege of
+                partnering with each client as a truly exceptional experience,
+                committed to providing unparalleled privacy and discretion in
+                every aspect of our representation.
               </p>
             </div>
           </div>
@@ -143,25 +176,28 @@ const Work = () => {
 
         <section className="credits">
           <div className="container">
-            <h2>Credits</h2>
+            <h2>Key Expertise</h2>
 
             <div className="credits-row">
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Project</p>
+                  <p>Our Specialties</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Shadow Beacon</p>
+                  <p>
+                    Strategic Financial Structuring, Risk Mitigation, Corporate
+                    Transactions
+                  </p>
                 </div>
               </div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Our Role</p>
+                  <p>Client Sectors</p>
                 </div>
                 <div className="credits-copy">
                   <p>
-                    Motion Capture, Creative Direction, 3D Design, Atmospheric
-                    Post-Production
+                    Family Offices, Sovereign Wealth Funds, Institutional
+                    Investors
                   </p>
                 </div>
               </div>
@@ -172,111 +208,18 @@ const Work = () => {
             <div className="credits-row">
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Team</p>
+                  <p>Leadership</p>
+                </div>
+                <div className="credits-copy">
+                  <p>Advisors from Top-Tier Law Firms & Investment Banks</p>
                 </div>
               </div>
               <div className="credits-col">
                 <div className="credits-header">
-                  <p>Directors</p>
+                  <p>Advisors from Top-Tier Law Firms & Investment Banks</p>
                 </div>
                 <div className="credits-copy">
-                  <p>Lila Morrin (Lightforms), Kai Rivers (Lightforms)</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="credits-row">
-              <div className="credits-col"></div>
-              <div className="credits-col">
-                <div className="credits-header">
-                  <p>Creative Producer</p>
-                </div>
-                <div className="credits-copy">
-                  <p>Eli Dawson</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="credits-row">
-              <div className="credits-col"></div>
-              <div className="credits-col">
-                <div className="credits-header">
-                  <p>Art Direction & Animation</p>
-                </div>
-                <div className="credits-copy">
-                  <p>Lila Morrin (Lightforms)</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="credits-row">
-              <div className="credits-col"></div>
-              <div className="credits-col">
-                <div className="credits-header">
-                  <p>Editing & Compositing</p>
-                </div>
-                <div className="credits-copy">
-                  <p>Kai Rivers (Lightforms)</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="credits-row">
-              <div className="credits-col"></div>
-              <div className="credits-col">
-                <div className="credits-header">
-                  <p>Cinematography & Color Grading</p>
-                </div>
-                <div className="credits-copy">
-                  <p>Rhea Clarke</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="credits-row">
-              <div className="credits-col"></div>
-              <div className="credits-col">
-                <div className="credits-header">
-                  <p>Choreography</p>
-                </div>
-                <div className="credits-copy">
-                  <p>Juno Evers</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="credits-row">
-              <div className="credits-col"></div>
-              <div className="credits-col">
-                <div className="credits-header">
-                  <p>Sound Design</p>
-                </div>
-                <div className="credits-copy">
-                  <p>Echo Chamber Studios</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="credits-row">
-              <div className="credits-col"></div>
-              <div className="credits-col">
-                <div className="credits-header">
-                  <p>Label</p>
-                </div>
-                <div className="credits-copy">
-                  <p>Lightforms Collective</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="credits-row">
-              <div className="credits-col"></div>
-              <div className="credits-col">
-                <div className="credits-header">
-                  <p>Acknowledgments</p>
-                </div>
-                <div className="credits-copy">
-                  <p>Mira Solis, Adrian Wren, & Camille Trest</p>
+                  <p>Confidentiality, Integrity, Innovation</p>
                 </div>
               </div>
             </div>
@@ -290,13 +233,9 @@ const Work = () => {
 
           <div className="container">
             <div className="next-project-header">
-              <div className="next-project-icon">
-                <h1>
-                  <IoMdArrowForward />
-                </h1>
-              </div>
-              <div className="next-project-title">
-                <h1>The Machina Chronicles by Narratives Studio</h1>
+              <BackToTopButton />
+              <div className="sp-info-title">
+                <h2>Back to Top</h2>
               </div>
             </div>
           </div>

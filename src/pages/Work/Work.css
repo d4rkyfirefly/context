@@ -39,6 +39,45 @@
   color: #fff;
 }
 
+.back-to-top-btn {
+  position: relative;
+  top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.back-to-top-btn-fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  transition: clip-path 0.3s ease;
+}
+
+.back-to-top-btn-icon {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.back-to-top-btn:hover .back-to-top-btn-fill {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.back-to-top-btn:hover .back-to-top-btn-icon {
+  color: #000;
+}
+
 .sp-title {
   height: max-content;
   padding: 6em 0;
@@ -71,6 +110,10 @@ p.sp-details-name {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 2em;
+}
+
+.spacer {
+  height: 40px; /* Adds extra space */
 }
 
 .sp-tags {
@@ -210,9 +253,18 @@ p.sp-details-name {
 }
 
 .next-project-header {
-  width: 75%;
   display: flex;
-  gap: 0.75em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em; /* Adjust the gap as needed */
+}
+
+.sp-info-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .next-project-title h1 {
@@ -222,6 +274,25 @@ p.sp-details-name {
 .next-project-icon {
   position: relative;
   top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.next-project-icon:hover {
+  transform: scale(1.1);
+}
+
+.next-project-icon h1 {
+  margin: 0;
+  font-size: 24px;
 }
 
 @media (max-width: 900px) {
