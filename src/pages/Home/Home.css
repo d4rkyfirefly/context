@@ -590,6 +590,21 @@ section.work {
   border-color: #0c9de0; /* Change to your desired hover border color */
 }
 
+/* Media Queries for Smaller Devices */
+@media (max-width: 768px) {
+  .team-member-toggle {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member-toggle {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
 .team-member-copy {
   width: 35%;
 }
