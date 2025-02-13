@@ -59,6 +59,7 @@ section.hero {
   justify-content: center;
   align-items: center;
   z-index: 1000; /* Ensure the modal is on top of other elements */
+  overflow: auto; /* Allow the modal to be scrollable */
 }
 
 .modal-content {
@@ -68,6 +69,8 @@ section.hero {
   border-radius: 10px; /* Slightly larger border radius for a softer look */
   max-width: 600px; /* Increase max-width for better readability */
   width: 90%; /* Use a percentage width for better responsiveness */
+  max-height: 90%; /* Limit the height of the modal content */
+  overflow-y: auto; /* Make the modal content scrollable */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
   text-align: center; /* Center-align text */
 }
@@ -100,28 +103,48 @@ section.hero {
   background: #555; /* Button hover background color */
 }
 
-@media (max-width: 1200px) {
-  .header h1 {
-    font-size: 4rem;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%; /* Adjust max-width for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .modal-content h2 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .modal-content p {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .modal-content button {
+    padding: 8px 16px; /* Adjust button padding for smaller screens */
   }
 }
 
-@media (max-width: 900px) {
-  .header h1 {
-    font-size: 3rem;
+@media (max-width: 480px) {
+  .modal-content {
+    max-width: 95%; /* Adjust max-width for very small screens */
+    padding: 10px; /* Adjust padding for very small screens */
+  }
+
+  .modal-content h2 {
+    font-size: 1rem; /* Adjust font size for very small screens */
+  }
+
+  .modal-content p {
+    font-size: 0.8rem; /* Adjust font size for very small screens */
+  }
+
+  .modal-content button {
+    padding: 6px 12px; /* Adjust button padding for very small screens */
   }
 }
 
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 300px) {
-  .header h1 {
-    font-size: 1rem;
-  }
+.modal-open {
+  overflow: hidden;
+  height: 100%; /* Ensure the body height is fixed */
 }
 
 .h-1 {

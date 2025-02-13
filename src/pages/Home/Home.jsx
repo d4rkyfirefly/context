@@ -36,10 +36,14 @@ const Home = () => {
           {paragraphs}
         </div>
       );
+      document.body.classList.add("modal-open");
     }
   };
-
-  const closeModal = () => setModalContent(null);
+  
+  const closeModal = () => {
+    setModalContent(null);
+    document.body.classList.remove("modal-open");
+  };
 
   useEffect(() => {
     const checkMobile = () => {
