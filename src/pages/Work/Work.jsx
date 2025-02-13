@@ -38,7 +38,7 @@ const Work = () => {
         </section>
 
         <section className="sp-banner">
-          <img src="/work/work1.jpg" alt="" />
+          <img src="/work/work1.webp" alt="" />
         </section>
 
         <section className="sp-details">
@@ -127,7 +127,7 @@ const Work = () => {
 
         <section className="sp-img">
           <div className="container">
-            <img src="/work/work2.jpg" alt="" />
+            <img src="/work/work2.webp" alt="" />
           </div>
         </section>
 
@@ -170,7 +170,7 @@ const Work = () => {
 
         <section className="sp-img">
           <div className="container">
-            <img src="/work/work3.jpg" alt="" />
+            <img src="/work/work3.webp" alt="" />
           </div>
         </section>
 
@@ -227,8 +227,8 @@ const Work = () => {
         </section>
 
         <section className="next-project">
-          <div className="next-project-img">
-            <img src="/projects/project4.jpg" alt="" />
+          <div className="next-project-img dark-overlay">
+          <img src="/projects/project6.webp" alt="" />
           </div>
 
           <div className="container">

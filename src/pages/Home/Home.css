@@ -22,7 +22,7 @@ section.hero {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
+  display: flex; 
   flex-direction: column; /* Ensures vertical stacking */
   align-items: center; /* Centers text horizontally */
   justify-content: center; /* Centers text vertically */
@@ -45,6 +45,26 @@ section.hero {
   text-align: center;
   line-height: 1.2;
   display: block;
+  width: 100%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
   width: 100%;
 }
 
@@ -167,6 +187,7 @@ section.work {
 .footer-header p {
   font-weight: 600;
 }
+
 
 .projects {
   display: flex;
@@ -377,6 +398,27 @@ section.work {
 
 .about .container > div {
   flex: 1;
+}
+
+.about-copy .quote {
+  font-size: 2.55rem; /* Adjust the font size to match the original text */
+  font-weight: 700; /* Adjust the font weight to match the original text */
+  line-height: 1.5;
+  text-align: center; /* Align the text to the left */
+  margin: 1em 0; /* Add some margin for spacing */
+  color: #766e6e; /* Adjust the color as needed */
+}
+
+@media (max-width: 900px) {
+  .about-copy .quote {
+    font-size: 3rem; /* Adjust the font size for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .about-copy .quote {
+    font-size: 2.5rem; /* Adjust the font size for smaller screens */
+  }
 }
 
 .about-copy p {

@@ -150,7 +150,7 @@ const Home = () => {
     gsap.to(".marquee-text", {
       scrollTrigger: {
         trigger: ".marquee",
-        start: "top bottom",
+        start: "top 70%",
         end: "bottom top",
         scrub: 1,
         markers: false,
@@ -255,6 +255,7 @@ const Home = () => {
               <div className="project-col">
                 {projects
                   .filter((project) => project.column === 1)
+                  .slice(0, 2) // Limit to 2 images
                   .map((project) => (
                     <Link to="/work" key={project.id}>
                       <div className="project">
@@ -275,6 +276,7 @@ const Home = () => {
               <div className="project-col">
                 {projects
                   .filter((project) => project.column === 2)
+                  .slice(0, 2) // Limit to 2 images
                   .map((project) => (
                     <Link to="/work" key={project.id}>
                       <div className="project">
@@ -304,8 +306,8 @@ const Home = () => {
           </div>
           <div className="cta-header">
             <h2>
-              Connecting markets, businesses, and people across continents.
-              Your global financial partner in a borderless economy.
+              Connecting markets, businesses, and people across continents. Your
+              global financial partner in a borderless economy.
             </h2>
           </div>
         </section>
@@ -318,10 +320,12 @@ const Home = () => {
             </div>
             <div className="manifesto-title">
               <h1>
-              Delivering financial solutions tailored to every market. Trusted by investors, institutions
-              and enterprises across the globe. We navigate international markets with data-driven precision 
-              surprise, delight, and evolve. AI-powered financial insights for a connected world. We integrate 
-              data and technology to drive smarter investments worldwide.
+                Delivering financial solutions tailored to every market. Trusted
+                by investors, institutions and enterprises across the globe. We
+                navigate international markets with data-driven precision
+                surprise, delight, and evolve. AI-powered financial insights for
+                a connected world. We integrate data and technology to drive
+                smarter investments worldwide.
               </h1>
             </div>
           </div>
@@ -342,10 +346,11 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    Rooted in creativity, Origin bridges cultures to craft
-                    designs that transcend time and place. We thrive at the
-                    intersection of ideas, uniting diverse perspectives into a
-                    seamless vision.
+                    At Contrex Partners, we seamlessly integrate cutting-edge
+                    technology with financial expertise to deliver innovative
+                    solutions. Our approach bridges the gap between traditional
+                    finance and modern advancements, ensuring our clients stay
+                    ahead in a rapidly evolving market.
                   </p>
                 </div>
               </div>
@@ -364,9 +369,11 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    Creativity is a collective process. At Origin, collaboration
-                    is our foundation—merging ideas, talents, and visions to
-                    create experiences that resonate universally.
+                    Collaboration is at the heart of everything we do. By
+                    working closely with our clients and partners, we combine
+                    diverse perspectives and expertise to create tailored
+                    financial strategies. Together, we achieve extraordinary
+                    results and drive sustainable growth.
                   </p>
                 </div>
               </div>
@@ -385,9 +392,11 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    We challenge conventions and redefine possibilities. At
-                    Origin, we dare to push boundaries, delivering solutions
-                    that are as bold as they are impactful.
+                    We thrive on challenging the status quo. At Contrex
+                    Partners, we push boundaries and redefine possibilities to
+                    deliver bold, impactful solutions. Our commitment to
+                    innovation and excellence drives us to tackle complex
+                    financial challenges head-on.
                   </p>
                 </div>
               </div>
@@ -397,7 +406,7 @@ const Home = () => {
 
         <div className="marquee">
           <div className="marquee-text">
-            <h1>Explore</h1>
+            <h1>Visionaries in financial innovation.</h1>
           </div>
         </div>
 
@@ -410,21 +419,14 @@ const Home = () => {
             <div className="about-col">
               <div className="about-header">
                 <HiArrowRight size={13} />
-                <p>Origin Spirit</p>
+                <p>Contrex Partners</p>
               </div>
               <div className="about-copy">
-                <p>
-                  The Origin Spirit embodies creativity without boundaries.
-                  Whether you’re a lifelong dreamer, a new explorer, or someone
-                  returning to familiar grounds, Origin welcomes those who dare
-                  to imagine. Being part of Origin means embracing inspiration,
-                  collaboration, and limitless potential.
+                <p className="quote">
+                  “Precision, discretion, and innovation—navigating the
+                  complexities of global finance to unlock extraordinary
+                  opportunities.”
                 </p>
-              </div>
-            </div>
-            <div className="about-col">
-              <div className="cta-btn">
-                <button>Discover</button>
               </div>
             </div>
           </div>
@@ -434,58 +436,42 @@ const Home = () => {
           <div className="gallery-wrapper">
             <div className="row">
               <div className="img">
-                <img src="/marquee/img1.jpeg" alt="" />
+                <img src="/marquee/img7.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img2.jpeg" alt="" />
+                <img src="/marquee/img8.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img3.jpeg" alt="" />
+                <img src="/marquee/img5.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img4.jpeg" alt="" />
-              </div>
-            </div>
-            <div className="row">
-              <div className="img">
-                <img src="/marquee/img5.jpeg" alt="" />
+                <img src="/marquee/img6.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img6.jpeg" alt="" />
+                <img src="/marquee/img7.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img7.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img8.jpeg" alt="" />
+                <img src="/marquee/img8.png" alt="" />
               </div>
             </div>
             <div className="row">
               <div className="img">
-                <img src="/marquee/img9.jpeg" alt="" />
+                <img src="/marquee/img9.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img10.jpeg" alt="" />
+                <img src="/marquee/img10.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img11.jpeg" alt="" />
+                <img src="/marquee/img11.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img12.jpeg" alt="" />
-              </div>
-            </div>
-            <div className="row">
-              <div className="img">
-                <img src="/marquee/img13.jpeg" alt="" />
+                <img src="/marquee/img12.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img14.jpeg" alt="" />
+                <img src="/marquee/img7.png" alt="" />
               </div>
               <div className="img">
-                <img src="/marquee/img15.jpeg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/marquee/img16.jpeg" alt="" />
+                <img src="/marquee/img8.png" alt="" />
               </div>
             </div>
           </div>
@@ -507,28 +493,34 @@ const Home = () => {
 
             <div className="team-member tm-1">
               <div className="team-member-position">
-                <p>Lead Developer</p>
+                <p>Co-Founder</p>
               </div>
               <div className="team-member-profile">
                 <div className="team-member-img">
-                  <img src="/team/team-1.jpg" alt="" />
+                  <img src="/team/team-1.webp" alt="" />
                 </div>
                 <div className="team-member-info">
                   <div className="team-member-name">
                     <p>
-                      Alex <br />
-                      Johnson
+                      David W. <br />
+                      Hill
                     </p>
                   </div>
                   <div className="team-member-details">
-                    <div className="team-member-toggle">
+                    <div
+                      className="team-member-toggle"
+                      onClick={() => openModal("david")}
+                    >
                       <HiArrowRight size={24} />
                     </div>
                     <div className="team-member-copy">
                       <p>
-                        Alex is a skilled developer with expertise in modern web
-                        technologies and a passion for creating seamless user
-                        experiences.
+                        David co-founded Context.Partners as a seasoned
+                        Executive Advisor, Investment Banker, Chief Executive,
+                        and Chief Financial Officer with more than 35 years’
+                        success in delivering acquisitions, dispositions,
+                        financings, turnarounds, growth, and strategic pivots in
+                        challenging markets worldwide.
                       </p>
                     </div>
                   </div>
@@ -536,33 +528,46 @@ const Home = () => {
               </div>
               <div className="team-member-index">
                 <p>(01)</p>
-                <h1>Alex Johnson</h1>
+                <h1>David W. Hill</h1>
               </div>
             </div>
 
             <div className="team-member tm-2">
               <div className="team-member-position">
-                <p>UI/UX Designer</p>
+                <p>Co-Founder</p>
               </div>
               <div className="team-member-profile">
                 <div className="team-member-img">
-                  <img src="/team/team-2.jpg" alt="" />
+                  <img src="/team/team-2.webp" alt="" />
                 </div>
                 <div className="team-member-info">
                   <div className="team-member-name">
                     <p>
-                      Sophia <br />
-                      Martinez
+                      Ross <br />
+                      Eichberg
                     </p>
                   </div>
                   <div className="team-member-details">
-                    <div className="team-member-toggle">
+                  <div
+                      className="team-member-toggle"
+                      onClick={() => openModal("ross")}
+                    >
                       <HiArrowRight size={24} />
                     </div>
                     <div className="team-member-copy">
                       <p>
-                        Sophia specializes in crafting intuitive and visually
-                        appealing designs that bring digital products to life.
+                        Ross Eichberg co-founded Context.Partners with an
+                        extraordinary professional history of almost 40 years,
+                        highlighted by his 24-year tenure at Patton Boggs, LLP,
+                        an international law firm in Washington, DC, where he
+                        served as a senior partner and chaired the real estate
+                        department. One of the defining achievements in Ross's
+                        career was orchestrating the structured sale and
+                        purchase of a $225 million New York office building,
+                        earning a nomination for the "Most Ingenious Financing
+                        Transaction of the Year" by the Real Estate Board of New
+                        York. This success propelled him toward founding Context
+                        Partners.
                       </p>
                     </div>
                   </div>
@@ -570,34 +575,47 @@ const Home = () => {
               </div>
               <div className="team-member-index">
                 <p>(02)</p>
-                <h1>Sophia Martinez</h1>
+                <h1>Ross Eichberg</h1>
               </div>
             </div>
 
             <div className="team-member tm-3">
               <div className="team-member-position">
-                <p>Project Manager</p>
+                <p>Partner</p>
               </div>
               <div className="team-member-profile">
                 <div className="team-member-img">
-                  <img src="/team/team-3.jpg" alt="" />
+                  <img src="/team/team-3.webp" alt="" />
                 </div>
                 <div className="team-member-info">
                   <div className="team-member-name">
                     <p>
-                      Michael <br />
-                      Brown
+                      Geoffrey <br />
+                      Davis
                     </p>
                   </div>
                   <div className="team-member-details">
-                    <div className="team-member-toggle">
+                  <div
+                      className="team-member-toggle"
+                      onClick={() => openModal("geof")}
+                    >
                       <HiArrowRight size={24} />
                     </div>
                     <div className="team-member-copy">
                       <p>
-                        Michael ensures projects are delivered on time and
-                        within scope, maintaining excellent communication with
-                        clients and the team.
+                        Geoffrey Davis is a highly skilled attorney specializing
+                        in domestic and international corporate transactions
+                        having served White & Case early in his career and as a
+                        partner at Squire Patton Boggs in Washington DC for the
+                        past 35 years. His expertise spans all phases of
+                        structuring, drafting, and negotiating private equity
+                        investments, mergers and acquisitions, joint ventures,
+                        and securities offerings. Geoff provides strategic
+                        guidance to private and public companies, financial
+                        institutions, and sovereign wealth funds, especially in
+                        the Middle East. His work encompasses a wide range of
+                        industries, including emerging technologies, green
+                        energy, biotech, and telecommunications.
                       </p>
                     </div>
                   </div>
@@ -605,7 +623,7 @@ const Home = () => {
               </div>
               <div className="team-member-index">
                 <p>(03)</p>
-                <h1>Michael Brown</h1>
+                <h1>Geoffrey Davis</h1>
               </div>
             </div>
           </div>
@@ -646,18 +664,6 @@ const Home = () => {
                         <HiArrowRight /> View on map
                       </p>
                     </div>
-
-                    <div className="location">
-                      <h3>Tokyo</h3>
-                      <p>Innovators Tower,</p>
-                      <p>Shibuya City, 8th Floor</p>
-                      <p>Tokyo, 150-0001</p>
-                      <p>Japan</p>
-
-                      <p>
-                        <HiArrowRight /> View on map
-                      </p>
-                    </div>
                   </div>
                   <div className="footer-sub-col">
                     <div className="location">
@@ -671,29 +677,17 @@ const Home = () => {
                         <HiArrowRight /> View on map
                       </p>
                     </div>
-
-                    <div className="location">
-                      <h3>Singapore</h3>
-                      <p>Marina Bay Financial Center,</p>
-                      <p>10 Marina Blvd, Tower 2</p>
-                      <p>Singapore, 018983</p>
-                      <p>Singapore</p>
-
-                      <p>
-                        <HiArrowRight /> View on map
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>
               <div className="footer-col">
-        <div className="footer-col-header">
-          <p>Back to Top</p>
-        </div>
-        <div className="footer-sub-col">
-          <BackToTopButton />
-        </div>
-      </div>
+                <div className="footer-col-header">
+                  <p>Back to Top</p>
+                </div>
+                <div className="footer-sub-col">
+                  <BackToTopButton />
+                </div>
+              </div>
             </div>
           </div>
         </section>
