@@ -403,7 +403,7 @@ const Home = () => {
                 </div>
                 <div className="process-description">
                   <p>
-                    We thrive on challenging the status quo. At Contrex
+                    We thrive on challenging the status quo. At Context
                     Partners, we push boundaries and redefine possibilities to
                     deliver bold, impactful solutions. Our commitment to
                     innovation and excellence drives us to tackle complex
