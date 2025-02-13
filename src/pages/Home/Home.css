@@ -54,18 +54,50 @@ section.hero {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000; /* Ensure the modal is on top of other elements */
 }
 
 .modal-content {
-  background: white;
+  background: rgb(23, 22, 22); /* Background color for the modal content */
+  color: rgb(255, 253, 253); /* Text color */
   padding: 20px;
+  border-radius: 10px; /* Slightly larger border radius for a softer look */
+  max-width: 600px; /* Increase max-width for better readability */
+  width: 90%; /* Use a percentage width for better responsiveness */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  text-align: center; /* Center-align text */
+}
+
+.modal-content h2 {
+  color: rgb(251, 248, 248); /* Ensure the heading text color is white */
+  margin-bottom: 15px; /* Add some space below the heading */
+  font-size: 1.5rem; /* Adjust font size for better readability */
+}
+
+.modal-content p {
+  color: rgb(247, 243, 243); /* Ensure the paragraph text color is white */
+  margin-bottom: 15px; /* Add some space below each paragraph */
+  line-height: 1.6; /* Increase line height for better readability */
+  text-align: justify; /* Justify text alignment */
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #333; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
   border-radius: 5px;
-  max-width: 500px;
-  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.modal-content button:hover {
+  background: #555; /* Button hover background color */
 }
 
 @media (max-width: 1200px) {
@@ -525,6 +557,14 @@ section.work {
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.team-member-toggle:hover {
+  transform: scale(1.1);
+  color: #268ed3; /* Change to your desired hover color */
+  border-color: #0c9de0; /* Change to your desired hover border color */
 }
 
 .team-member-copy {

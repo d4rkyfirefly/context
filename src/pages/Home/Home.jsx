@@ -10,6 +10,7 @@ import Transition from "../../components/Transition/Transition";
 import BackToTopButton from "../../components/BackButton/BackToTopButton";
 
 import { projects } from "./projects";
+import { teamBios } from "./teamBios";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -22,17 +23,23 @@ import { RiArrowRightDownLine } from "react-icons/ri";
 const Home = () => {
   const manifestoRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
 
-  useEffect(() => {
-    const scrollTimeout = setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant",
-      });
-    }, 0);
+  const openModal = (member) => {
+    const content = teamBios[member];
+    if (content) {
+      const paragraphs = content.bio.split('\n').map((text, index) => <p key={index}>{text.trim()}</p>);
+      setModalContent(
+        <div>
+          <h2>{content.name}</h2>
+          <p>{content.position}</p>
+          {paragraphs}
+        </div>
+      );
+    }
+  };
 
-    return () => clearTimeout(scrollTimeout);
-  }, []);
+  const closeModal = () => setModalContent(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -527,7 +534,9 @@ const Home = () => {
                 </div>
               </div>
               <div className="team-member-index">
-                <p>(01)</p>
+                <p>David W. Hill</p>
+                <p>dhill@context.partners</p>
+                <p>+1-512-845-7828</p>
                 <h1>David W. Hill</h1>
               </div>
             </div>
@@ -556,25 +565,22 @@ const Home = () => {
                     </div>
                     <div className="team-member-copy">
                       <p>
-                        Ross Eichberg co-founded Context.Partners with an
-                        extraordinary professional history of almost 40 years,
-                        highlighted by his 24-year tenure at Patton Boggs, LLP,
-                        an international law firm in Washington, DC, where he
-                        served as a senior partner and chaired the real estate
-                        department. One of the defining achievements in Ross's
-                        career was orchestrating the structured sale and
-                        purchase of a $225 million New York office building,
-                        earning a nomination for the "Most Ingenious Financing
-                        Transaction of the Year" by the Real Estate Board of New
-                        York. This success propelled him toward founding Context
-                        Partners.
+                        Ross Eichberg co-founded Context.Partners with nearly 40 
+                        years of experience. He spent 24 years at Patton Boggs, 
+                        LLP, where he was a senior partner and chaired the real 
+                        estate department. Ross orchestrated the structured sale 
+                        and purchase of a $225 million New York office building, 
+                        earning a nomination for the "Most Ingenious Financing 
+                        Transaction of the Year" by the Real Estate Board of New York.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="team-member-index">
-                <p>(02)</p>
+                <p>Ross Eichberg</p>
+                <p>reichberg@context.partners</p>
+                <p>+1-301-873-1891</p>
                 <h1>Ross Eichberg</h1>
               </div>
             </div>
@@ -597,32 +603,28 @@ const Home = () => {
                   <div className="team-member-details">
                   <div
                       className="team-member-toggle"
-                      onClick={() => openModal("geof")}
+                      onClick={() => openModal("geoffrey")}
                     >
                       <HiArrowRight size={24} />
                     </div>
                     <div className="team-member-copy">
                       <p>
-                        Geoffrey Davis is a highly skilled attorney specializing
-                        in domestic and international corporate transactions
-                        having served White & Case early in his career and as a
-                        partner at Squire Patton Boggs in Washington DC for the
-                        past 35 years. His expertise spans all phases of
-                        structuring, drafting, and negotiating private equity
-                        investments, mergers and acquisitions, joint ventures,
-                        and securities offerings. Geoff provides strategic
-                        guidance to private and public companies, financial
-                        institutions, and sovereign wealth funds, especially in
-                        the Middle East. His work encompasses a wide range of
-                        industries, including emerging technologies, green
-                        energy, biotech, and telecommunications.
+                        Geoffrey Davis is a highly skilled attorney specializing in domestic and 
+                        international corporate transactions. He has served White & Case and 
+                        Squire Patton Boggs in Washington DC for the past 35 years. 
+                        Geoff provides strategic guidance to private and public companies, 
+                        financial institutions, and sovereign wealth funds, especially in the 
+                        Middle East. His work encompasses a wide range of industries, 
+                        including emerging technologies, green energy, biotech, and telecommunications.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="team-member-index">
-                <p>(03)</p>
+                <p>Geoffrey Davis</p>
+                <p>gdavis@context.partners</p>
+                <p>+1-202-256-6145</p>
                 <h1>Geoffrey Davis</h1>
               </div>
             </div>
@@ -654,11 +656,11 @@ const Home = () => {
                 <div className="footer-col-content">
                   <div className="footer-sub-col">
                     <div className="location">
-                      <h3>New York</h3>
-                      <p>123 Creative Hub,</p>
-                      <p>5th Avenue, Suite 101</p>
-                      <p>New York, NY, 10010</p>
-                      <p>USA</p>
+                      <h3>ADDRESS</h3>
+                      <p>Text Text Text</p>
+                      <p>Text Text Text</p>
+                      <p>Text Text Text</p>
+                      <p>Text Text Text</p>
 
                       <p>
                         <HiArrowRight /> View on map
@@ -667,11 +669,11 @@ const Home = () => {
                   </div>
                   <div className="footer-sub-col">
                     <div className="location">
-                      <h3>London</h3>
-                      <p>Design District,</p>
-                      <p>Greenwich Peninsula</p>
-                      <p>London, SE10 0ER</p>
-                      <p>UK</p>
+                      <h3>ADDRESS</h3>
+                      <p>Text Text Text</p>
+                      <p>Text Text Text</p>
+                      <p>Text Text Text</p>
+                      <p>Text Text Text</p>
 
                       <p>
                         <HiArrowRight /> View on map
@@ -691,6 +693,14 @@ const Home = () => {
             </div>
           </div>
         </section>
+        {modalContent && (
+          <div className="modal">
+            <div className="modal-content">
+              {modalContent}
+              <button onClick={closeModal}>Close</button>
+            </div>
+          </div>
+        )}
       </div>
     </ReactLenis>
   );
